@@ -10,20 +10,40 @@ OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 OPENROUTER_MODEL = "openai/gpt-4o-mini"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-# ✅ Updated with verified user-provided short YouTube demo clips
+# ✅ Updated with verified short demonstration videos for each exercise
 EXERCISE_MEDIA = {
+    # 🦴 Lower Back
+    "cat-cow stretch": {"youtube": "https://www.youtube.com/watch?v=y_cKHKi9UaM"},
+    "child's pose": {"youtube": "https://www.youtube.com/watch?v=2vJKSlfLX10"},
     "pelvic tilt": {"youtube": "https://www.youtube.com/watch?v=44D6Xc2Fkek"},
-    "hamstring stretch": {"youtube": "https://www.youtube.com/watch?v=zJc1zb1RiDQ"},
+    "bridge": {"youtube": "https://www.youtube.com/watch?v=WowARnE-p0s"},
+
+    # 💪 Upper Back & Neck
     "neck stretch": {"youtube": "https://www.youtube.com/watch?v=t-1Z2ZYpmt0"},
     "chin tuck": {"youtube": "https://www.youtube.com/watch?v=1v9e8PdmqEI"},
-    "shoulder roll": {"youtube": "https://www.youtube.com/watch?v=XbzY45Z5DE8"},
+    "shoulder roll": {"youtube": "https://www.physitrack.com/exercise-library/how-to-perform-shoulder-rolls-exercise"},
+
+    # 🦾 Shoulder & Arm
     "arm circles": {"youtube": "https://www.youtube.com/watch?v=bP52FXTlzjA"},
     "pendulum": {"youtube": "https://www.youtube.com/watch?v=zY5nq68IxwA"},
+
+    # 🦵 Hip & Leg
+    "hip flexor stretch": {"youtube": "https://www.youtube.com/shorts/Mh1FgwOVQB4"},
     "clamshell": {"youtube": "https://www.youtube.com/watch?v=vsQugiJgZZE"},
+    "hamstring stretch": {"youtube": "https://www.youtube.com/watch?v=zJc1zb1RiDQ"},
+    "quad stretch": {"youtube": "https://www.youtube.com/watch?v=BhQimqvU1tM"},
+    "wall sit": {"youtube": "https://www.youtube.com/watch?v=JaZNYM3zAP0"},
     "straight leg raise": {"youtube": "https://www.youtube.com/watch?v=EWGR5mTPzsU"},
+
+    # 🦶 Ankle & Foot
     "ankle circles": {"youtube": "https://www.youtube.com/watch?v=mzTQGYGI0Ng"},
     "calf raise": {"youtube": "https://www.youtube.com/watch?v=gwLzBJYoWlI"},
-    "chest stretch": {"youtube": "https://www.youtube.com/watch?v=EIbudx3gqV8"}
+
+    # 💨 Chest / Torso
+    "chest stretch": {"youtube": "https://www.youtube.com/watch?v=EIbudx3gqV8"},
+
+    # 🌿 Generic / Fallback
+    "stretch": {"youtube": "https://www.youtube.com/watch?v=itJE4neqDJw"}
 }
 
 # ============================================================================
