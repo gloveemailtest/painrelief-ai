@@ -29,7 +29,6 @@ EXERCISE_MEDIA = {
         "gif": "https://media.tenor.com/_K6AoJ6PdrwAAAAC/bridge-exercise.gif",
         "youtube": "https://www.youtube.com/watch?v=wPM8icPu6H8"
     },
-
     # Neck
     "neck rotation": {
         "gif": "https://media.tenor.com/tbYdfV6TIEUAAAAC/neck-stretch.gif",
@@ -43,7 +42,6 @@ EXERCISE_MEDIA = {
         "gif": "https://media.tenor.com/3x0Z6pDWWxYAAAAC/neck-stretch-exercise.gif",
         "youtube": "https://www.youtube.com/watch?v=ay0P1zYfJ3o"
     },
-
     # Shoulder
     "shoulder roll": {
         "gif": "https://media.tenor.com/W6r6mu5RpjYAAAAC/shoulder-rolls.gif",
@@ -57,7 +55,6 @@ EXERCISE_MEDIA = {
         "gif": "https://media.tenor.com/5UNSlgWgK6oAAAAC/pendulum-shoulder.gif",
         "youtube": "https://www.youtube.com/watch?v=KAjOOuG9h2k"
     },
-
     # Hip
     "hip flexor stretch": {
         "gif": "https://media.tenor.com/Keu6nO9X8vsAAAAC/hip-flexor-stretch.gif",
@@ -67,7 +64,6 @@ EXERCISE_MEDIA = {
         "gif": "https://media.tenor.com/V5zpiqD2p08AAAAC/clamshell-exercise.gif",
         "youtube": "https://www.youtube.com/watch?v=GgPBxgYDLwU"
     },
-
     # Knee / Leg
     "hamstring stretch": {
         "gif": "https://media.tenor.com/0ZYsacL8ZVcAAAAC/hamstring-stretch.gif",
@@ -85,7 +81,6 @@ EXERCISE_MEDIA = {
         "gif": "https://media.tenor.com/8xKzL4W0LVEAAAAC/straight-leg-raise.gif",
         "youtube": "https://www.youtube.com/watch?v=q-DAkPie4-c"
     },
-
     # Ankle / Foot
     "ankle circles": {
         "gif": "https://media.tenor.com/jYngHUV1Gv8AAAAC/ankle-circles.gif",
@@ -95,13 +90,11 @@ EXERCISE_MEDIA = {
         "gif": "https://media.tenor.com/3rQ70YbsnxYAAAAC/calf-raise.gif",
         "youtube": "https://www.youtube.com/watch?v=-M4-G8p8fmc"
     },
-
     # Chest
     "chest stretch": {
         "gif": "https://media.tenor.com/NF1C1ZoM0PcAAAAC/chest-stretch.gif",
         "youtube": "https://www.youtube.com/watch?v=gLkKzA3f6zE"
     },
-
     # Fallback
     "stretch": {
         "gif": "https://media.tenor.com/pjwzLzj1H5oAAAAC/stretch-yoga.gif",
@@ -217,17 +210,18 @@ def main():
                     st.rerun()
             with col2:
                 # Force GIF to show clearly on all themes
-st.markdown(
-    f"""
-    <div style="background-color:#ffffff;padding:10px;border-radius:10px;text-align:center;">
-        <img src="{media['gif']}" alt="exercise demo" style="width:100%;border-radius:10px;"/>
-        <a href="{media['youtube']}" target="_blank" style="display:block;margin-top:8px;color:#667eea;text-decoration:none;font-weight:600;">
-            ▶ Watch on YouTube
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+                st.markdown(
+                    f"""
+                    <div style="background-color:#ffffff;padding:10px;border-radius:10px;text-align:center;">
+                        <img src="{media['gif']}" alt="exercise demo" style="width:100%;border-radius:10px;"/>
+                        <a href="{media['youtube']}" target="_blank"
+                           style="display:block;margin-top:8px;color:#667eea;text-decoration:none;font-weight:600;">
+                            ▶ Watch on YouTube
+                        </a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
 
             st.markdown("</div>", unsafe_allow_html=True)
 
