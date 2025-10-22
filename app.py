@@ -216,7 +216,7 @@ def main():
                     st.session_state.exercises_completed.remove(i)
                     st.rerun()
             with col2:
-                st.image(media["gif"], use_column_width=True)
+                st.image(media["gif"], use_container_width=True)
                 st.markdown(f"[▶ Watch on YouTube]({media['youtube']})", unsafe_allow_html=True)
             st.markdown("</div>", unsafe_allow_html=True)
 
