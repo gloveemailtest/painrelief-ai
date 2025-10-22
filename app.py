@@ -12,67 +12,27 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # ✅ Updated with short verified YouTube 'how-to' clips
 EXERCISE_MEDIA = {
-    "cat-cow stretch": {
-        "youtube": "https://www.youtube.com/watch?v=of2spyCtUkw"
-    },
-    "child's pose": {
-        "youtube": "https://www.youtube.com/watch?v=QsXWszvjZ8w"
-    },
-    "pelvic tilt": {
-        "youtube": "https://www.youtube.com/watch?v=ybBccO4fze4"
-    },
-    "bridge": {
-        "youtube": "https://www.youtube.com/watch?v=wPM8icPu6H8"
-    },
-    "neck rotation": {
-        "youtube": "https://www.youtube.com/watch?v=lJzjM4tKp8Q"
-    },
-    "chin tuck": {
-        "youtube": "https://www.youtube.com/watch?v=tsv7Dq8m73I"
-    },
-    "neck stretch": {
-        "youtube": "https://www.youtube.com/watch?v=F2ZpFzQyF0M"
-    },
-    "shoulder roll": {
-        "youtube": "https://www.youtube.com/watch?v=8W9G0cR0U7Y"
-    },
-    "arm circles": {
-        "youtube": "https://www.youtube.com/watch?v=5eK3yY5xS1A"
-    },
-    "pendulum": {
-        "youtube": "https://www.youtube.com/watch?v=KAjOOuG9h2k"
-    },
-    "hip flexor stretch": {
-        "youtube": "https://www.youtube.com/watch?v=vX3WrXh0T4Q"
-    },
-    "clamshell": {
-        "youtube": "https://www.youtube.com/watch?v=GgPBxgYDLwU"
-    },
-    "hamstring stretch": {
-        "youtube": "https://www.youtube.com/watch?v=fs_e9Ai2nlo"
-    },
-    "quad stretch": {
-        "youtube": "https://www.youtube.com/watch?v=riEXN0TqN4o"
-    },
-    "wall sit": {
-        "youtube": "https://www.youtube.com/watch?v=-cdph8hv0O0"
-    },
-    "straight leg raise": {
-        "youtube": "https://www.youtube.com/watch?v=q-DAkPie4-c"
-    },
-    "ankle circles": {
-        "youtube": "https://www.youtube.com/watch?v=gF4dV8qD6AA"
-    },
-    "calf raise": {
-        "youtube": "https://www.youtube.com/watch?v=-M4-G8p8fmc"
-    },
-    "chest stretch": {
-        "youtube": "https://www.youtube.com/watch?v=gLkKzA3f6zE"
-    },
-    "stretch": {
-        "youtube": "https://www.youtube.com/watch?v=g_tea8ZNk5A"
-    }
+    "cat-cow stretch": {"youtube": "https://www.youtube.com/watch?v=CiGpYH7j6hU"},
+    "child's pose": {"youtube": "https://www.youtube.com/watch?v=QsXWszvjZ8w"},
+    "pelvic tilt": {"youtube": "https://www.youtube.com/watch?v=ybBccO4fze4"},
+    "bridge": {"youtube": "https://www.youtube.com/watch?v=wPM8icPu6H8"},
+    "hamstring stretch": {"youtube": "https://www.youtube.com/watch?v=fs_e9Ai2nlo"},
+    "neck stretch": {"youtube": "https://www.youtube.com/watch?v=z6VxZ2XzK2w"},
+    "chin tuck": {"youtube": "https://www.youtube.com/watch?v=tsv7Dq8m73I"},
+    "shoulder roll": {"youtube": "https://www.youtube.com/watch?v=8W9G0cR0U7Y"},
+    "arm circles": {"youtube": "https://www.youtube.com/watch?v=5eK3yY5xS1A"},
+    "pendulum": {"youtube": "https://www.youtube.com/watch?v=kLgkGqZ8I_A"},
+    "hip flexor stretch": {"youtube": "https://www.youtube.com/watch?v=ly5wFqYE4lc"},
+    "clamshell": {"youtube": "https://www.youtube.com/watch?v=GgPBxgYDLwU"},
+    "quad stretch": {"youtube": "https://www.youtube.com/watch?v=riEXN0TqN4o"},
+    "wall sit": {"youtube": "https://www.youtube.com/watch?v=-cdph8hv0O0"},
+    "straight leg raise": {"youtube": "https://www.youtube.com/watch?v=wgPzV6H3Wok"},
+    "ankle circles": {"youtube": "https://www.youtube.com/watch?v=gF4dV8qD6AA"},
+    "calf raise": {"youtube": "https://www.youtube.com/watch?v=-M4-G8p8fmc"},
+    "chest stretch": {"youtube": "https://www.youtube.com/watch?v=XhSvkE5qofM"},
+    "stretch": {"youtube": "https://www.youtube.com/watch?v=g_tea8ZNk5A"}
 }
+
 
 # ============================================================================
 # STYLING
