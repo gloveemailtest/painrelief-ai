@@ -10,29 +10,21 @@ OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 OPENROUTER_MODEL = "openai/gpt-4o-mini"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-# ✅ Updated with short verified YouTube 'how-to' clips
+# ✅ Updated with verified user-provided short YouTube demo clips
 EXERCISE_MEDIA = {
-    "cat-cow stretch": {"youtube": "https://www.youtube.com/watch?v=CiGpYH7j6hU"},
-    "child's pose": {"youtube": "https://www.youtube.com/watch?v=QsXWszvjZ8w"},
-    "pelvic tilt": {"youtube": "https://www.youtube.com/watch?v=ybBccO4fze4"},
-    "bridge": {"youtube": "https://www.youtube.com/watch?v=wPM8icPu6H8"},
-    "hamstring stretch": {"youtube": "https://www.youtube.com/watch?v=fs_e9Ai2nlo"},
-    "neck stretch": {"youtube": "https://www.youtube.com/watch?v=z6VxZ2XzK2w"},
-    "chin tuck": {"youtube": "https://www.youtube.com/watch?v=tsv7Dq8m73I"},
-    "shoulder roll": {"youtube": "https://www.youtube.com/watch?v=8W9G0cR0U7Y"},
-    "arm circles": {"youtube": "https://www.youtube.com/watch?v=5eK3yY5xS1A"},
-    "pendulum": {"youtube": "https://www.youtube.com/watch?v=kLgkGqZ8I_A"},
-    "hip flexor stretch": {"youtube": "https://www.youtube.com/watch?v=ly5wFqYE4lc"},
-    "clamshell": {"youtube": "https://www.youtube.com/watch?v=GgPBxgYDLwU"},
-    "quad stretch": {"youtube": "https://www.youtube.com/watch?v=riEXN0TqN4o"},
-    "wall sit": {"youtube": "https://www.youtube.com/watch?v=-cdph8hv0O0"},
-    "straight leg raise": {"youtube": "https://www.youtube.com/watch?v=wgPzV6H3Wok"},
-    "ankle circles": {"youtube": "https://www.youtube.com/watch?v=gF4dV8qD6AA"},
-    "calf raise": {"youtube": "https://www.youtube.com/watch?v=-M4-G8p8fmc"},
-    "chest stretch": {"youtube": "https://www.youtube.com/watch?v=XhSvkE5qofM"},
-    "stretch": {"youtube": "https://www.youtube.com/watch?v=g_tea8ZNk5A"}
+    "pelvic tilt": {"youtube": "https://www.youtube.com/watch?v=44D6Xc2Fkek"},
+    "hamstring stretch": {"youtube": "https://www.youtube.com/watch?v=zJc1zb1RiDQ"},
+    "neck stretch": {"youtube": "https://www.youtube.com/watch?v=t-1Z2ZYpmt0"},
+    "chin tuck": {"youtube": "https://www.youtube.com/watch?v=1v9e8PdmqEI"},
+    "shoulder roll": {"youtube": "https://www.youtube.com/watch?v=XbzY45Z5DE8"},
+    "arm circles": {"youtube": "https://www.youtube.com/watch?v=bP52FXTlzjA"},
+    "pendulum": {"youtube": "https://www.youtube.com/watch?v=zY5nq68IxwA"},
+    "clamshell": {"youtube": "https://www.youtube.com/watch?v=vsQugiJgZZE"},
+    "straight leg raise": {"youtube": "https://www.youtube.com/watch?v=EWGR5mTPzsU"},
+    "ankle circles": {"youtube": "https://www.youtube.com/watch?v=mzTQGYGI0Ng"},
+    "calf raise": {"youtube": "https://www.youtube.com/watch?v=gwLzBJYoWlI"},
+    "chest stretch": {"youtube": "https://www.youtube.com/watch?v=EIbudx3gqV8"}
 }
-
 
 # ============================================================================
 # STYLING
@@ -64,7 +56,7 @@ def get_exercise_media(name):
     for key, val in EXERCISE_MEDIA.items():
         if key in name:
             return val
-    return EXERCISE_MEDIA["stretch"]
+    return {"youtube": "https://www.youtube.com/watch?v=g_tea8ZNk5A"}
 
 def get_ai_recommendations(location, description, intensity):
     headers = {"Authorization": f"Bearer {OPENROUTER_API_KEY}", "Content-Type": "application/json"}
@@ -141,7 +133,6 @@ def main():
                     st.session_state.exercises_completed.remove(i)
                     st.rerun()
             with col2:
-                # Use short verified 'how-to' video clips
                 if media["youtube"]:
                     st.video(media["youtube"])
                 st.markdown(
