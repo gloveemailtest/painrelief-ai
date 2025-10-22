@@ -128,16 +128,6 @@ def apply_custom_css():
             border-radius: 8px;
             margin: 20px 0;
         }
-        .demo-button {
-            background: #667eea;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 0.9em;
-        }
         </style>
     """, unsafe_allow_html=True)
 
@@ -145,8 +135,8 @@ def apply_custom_css():
 # HELPER FUNCTIONS
 # ============================================================================
 
-def get_exercise_demo(exercise_name):
-    """Match exercise description to appropriate demo"""
+def get_exercise_video_id(exercise_name):
+    """Match exercise description to appropriate YouTube video ID"""
     exercise_lower = exercise_name.lower()
     
     # Try exact match first
@@ -155,20 +145,20 @@ def get_exercise_demo(exercise_name):
             return EXERCISE_DEMOS[key]
     
     # Try partial matches for common exercises
-    if "stretch" in exercise_lower:
-        return EXERCISE_DEMOS["stretch"]
-    elif "breath" in exercise_lower:
-        return EXERCISE_DEMOS["breathing"]
-    elif "bridge" in exercise_lower:
+    if "bridge" in exercise_lower:
         return EXERCISE_DEMOS["bridge"]
     elif "clamshell" in exercise_lower:
         return EXERCISE_DEMOS["clamshell"]
     elif "roll" in exercise_lower and "shoulder" in exercise_lower:
         return EXERCISE_DEMOS["shoulder roll"]
-    elif "raise" in exercise_lower and ("leg" in exercise_lower or "calf" in exercise_lower):
+    elif "raise" in exercise_lower:
         if "calf" in exercise_lower:
             return EXERCISE_DEMOS["calf raise"]
         return EXERCISE_DEMOS["straight leg raise"]
+    elif "stretch" in exercise_lower:
+        return EXERCISE_DEMOS["stretch"]
+    elif "breath" in exercise_lower:
+        return EXERCISE_DEMOS["breathing"]
     else:
         # Default fallback
         return EXERCISE_DEMOS["stretch"]
@@ -316,10 +306,6 @@ def main():
                     st.markdown(f"### {idx + 1}. {exercise['name']}")
                     st.write(exercise['description'])
                     
-                    # Get demo info
-                    demo = get_exercise_demo(exercise['name'])
-                    st.markdown(f"[▶️ Watch Video Demo]({demo['video']})", unsafe_allow_html=True)
-                    
                     # Completion checkbox
                     is_completed = idx in st.session_state.exercises_completed
                     if st.checkbox(f"✅ Mark as completed", key=f"check_{idx}", value=is_completed):
@@ -332,10 +318,16 @@ def main():
                             st.rerun()
                 
                 with col2:
-                    # Display placeholder image
-                    demo = get_exercise_demo(exercise['name'])
-                    st.image(demo['image'], use_container_width=True)
-                    st.caption("Click link for video demo")
+                    # Embed YouTube video
+                    video_id = get_exercise_video_id(exercise['name'])
+                    st.markdown(f"""
+                        <iframe width="100%" height="200" 
+                        src="https://www.youtube.com/embed/{video_id}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                        </iframe>
+                    """, unsafe_allow_html=True)
                 
                 st.markdown("</div>", unsafe_allow_html=True)
         
