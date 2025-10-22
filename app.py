@@ -62,10 +62,11 @@ EXERCISE_DEMOS = {
     "knee": "y-wV4Venusw",
     
     # Ankle/Foot/Shin
-    "ankle circles": "JO0NKcZU0Zo",
+    "ankle circles": "Ep5D4bLdMZg",
     "calf raise": "gwLzBJYoWlI",
     "towel stretch": "gHCKT2ZLAM8",
-    "ankle": "JO0NKcZU0Zo",
+    "alphabet": "Ep5D4bLdMZg",
+    "ankle": "Ep5D4bLdMZg",
     "foot": "gHCKT2ZLAM8",
     "shin": "gwLzBJYoWlI",
     
@@ -127,6 +128,16 @@ def apply_custom_css():
             padding: 15px;
             border-radius: 8px;
             margin: 20px 0;
+            color: #333333;
+        }
+        .safety-box strong {
+            color: #000000;
+        }
+        .safety-box ul {
+            color: #333333;
+        }
+        .safety-box li {
+            color: #333333;
         }
         </style>
     """, unsafe_allow_html=True)
