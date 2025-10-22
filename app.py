@@ -216,8 +216,19 @@ def main():
                     st.session_state.exercises_completed.remove(i)
                     st.rerun()
             with col2:
-                st.image(media["gif"], use_container_width=True)
-                st.markdown(f"[▶ Watch on YouTube]({media['youtube']})", unsafe_allow_html=True)
+                # Force GIF to show clearly on all themes
+st.markdown(
+    f"""
+    <div style="background-color:#ffffff;padding:10px;border-radius:10px;text-align:center;">
+        <img src="{media['gif']}" alt="exercise demo" style="width:100%;border-radius:10px;"/>
+        <a href="{media['youtube']}" target="_blank" style="display:block;margin-top:8px;color:#667eea;text-decoration:none;font-weight:600;">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
             st.markdown("</div>", unsafe_allow_html=True)
 
         st.markdown("<div class='section-header'>⚠️ Important Safety Information</div>", unsafe_allow_html=True)
